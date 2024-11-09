@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio Pessoal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Meu Portfólio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre Mim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfólio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Seção Home -->
+  <section id="home" class="container mt-5">
+    <h1>Bem-vindo ao Meu Portfólio!</h1>
+    <p>Aqui você vai encontrar mais sobre mim e os meus projetos nas áreas de Biologia, Técnico em Edificações e Desenvolvimento.</p>
+  </section>
+
+  <!-- Seção Sobre Mim -->
+  <section id="sobre" class="container mt-5">
+    <h2>Sobre Mim</h2>
+    <p>Sou biólogo, técnico em edificações e desenvolvedor. Tenho experiência em diferentes áreas e estou sempre em busca de novos desafios.</p>
+    <!-- Guías para as áreas -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="biologo-tab" data-bs-toggle="tab" href="#biologo" role="tab" aria-controls="biologo" aria-selected="true">Biólogo</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="tecnico-tab" data-bs-toggle="tab" href="#tecnico" role="tab" aria-controls="tecnico" aria-selected="false">Técnico em Edificações</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="desenvolvedor-tab" data-bs-toggle="tab" href="#desenvolvedor" role="tab" aria-controls="desenvolvedor" aria-selected="false">Desenvolvedor</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="biologo" role="tabpanel" aria-labelledby="biologo-tab">
+        <p>Experiência com controle e manejo de anfíbios e répteis.</p>
+      </div>
+      <div class="tab-pane fade" id="tecnico" role="tabpanel" aria-labelledby="tecnico-tab">
+        <p>Experiência em projetos de construção e infraestrutura.</p>
+      </div>
+      <div class="tab-pane fade" id="desenvolvedor" role="tabpanel" aria-labelledby="desenvolvedor-tab">
+        <p>Desenvolvimento de aplicações web e mobile, com foco em soluções inovadoras.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Portfólio -->
+  <section id="portfolio" class="container mt-5">
+    <h2>Meu Portfólio</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="projeto1.jpg" class="card-img-top" alt="Projeto 1">
+          <div class="card-body">
+            <h5 class="card-title">Projeto 1</h5>
+            <p class="card-text">Descrição do projeto relacionado à área de biologia.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Replicar cards conforme os projetos -->
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="container mt-5">
+    <h2>Contato</h2>
+    <form>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="mensagem" class="form-label">Mensagem</label>
+        <textarea class="form-control" id="mensagem" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <!-- Links de redes sociais e currículo -->
+    <div class="mt-5">
+      <h3>Redes Sociais e Currículo</h3>
+      <p>Você pode me encontrar nas seguintes plataformas:</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="https://github.com/seuusuario" target="_blank">
+            <i class="fa fa-github fa-2x"></i> GitHub
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.linkedin.com/in/seuusuario/" target="_blank">
+            <i class="fa fa-linkedin fa-2x"></i> LinkedIn
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="http://lattes.cnpq.br/seuusuario" target="_blank">
+            <i class="fa fa-file-text fa-2x"></i> Currículo Lattes
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer com fundo azul escuro -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2024 Meu Portfólio - Todos os direitos reservados</p>
+    <p><a href="#home" class="text-white text-decoration-none">Voltar ao topo</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4 fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-purple-600">Meu Portfólio</h1>
+      <div class="space-x-6">
+        <a href="#home" class="hover:text-purple-600 transition-colors">Home</a>
+        <a href="#sobre" class="hover:text-purple-600 transition-colors">Sobre</a>
+        <a href="#contato" class="hover:text-purple-600 transition-colors">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-16">
+    
+    <!-- Carousel -->
+    <div class="relative h-96 mt-4">
+      <div class="absolute inset-0 flex items-center justify-between p-4">
+        <button class="p-2 bg-white rounded-full shadow-lg hover:bg-purple-100 transition-colors" onclick="prevSlide()">
+          &#10094;
+        </button>
+        <button class="p-2 bg-white rounded-full shadow-lg hover:bg-purple-100 transition-colors" onclick="nextSlide()">
+          &#10095;
+        </button>
+      </div>
+      <img id="carouselImage" src="/api/placeholder/1200/400" alt="Slide 1" class="w-full h-full object-cover">
+    </div>
+
+    <!-- Área de Links -->
+    <div class="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <a href="/biologo" class="transform hover:-translate-y-1 transition-transform">
+        <div class="bg-green-100 p-6 rounded-lg shadow-lg hover:shadow-xl">
+          <h2 class="text-xl font-bold text-green-800">Biólogo</h2>
+          <p class="text-green-600 mt-2">Explore meus projetos em biologia</p>
+        </div>
+      </a>
+      <a href="/edificacoes" class="transform hover:-translate-y-1 transition-transform">
+        <div class="bg-yellow-100 p-6 rounded-lg shadow-lg hover:shadow-xl">
+          <h2 class="text-xl font-bold text-yellow-800">Técnico em Edificações</h2>
+          <p class="text-yellow-600 mt-2">Conheça meus trabalhos em edificações</p>
+        </div>
+      </a>
+      <a href="/desenvolvedor" class="transform hover:-translate-y-1 transition-transform">
+        <div class="bg-purple-100 p-6 rounded-lg shadow-lg hover:shadow-xl">
+          <h2 class="text-xl font-bold text-purple-800">Desenvolvedor</h2>
+          <p class="text-purple-600 mt-2">Veja meus projetos de desenvolvimento</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="max-w-7xl mx-auto p-6 mt-12">
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Sobre Mim</h2>
+            <p class="text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="relative h-64">
+            <img src="/api/placeholder/600/400" alt="Perfil" class="rounded-lg object-cover w-full h-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Área de Contato -->
+    <section id="contato" class="max-w-7xl mx-auto p-6 mt-12">
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Entre em Contato</h2>
+        <div class="flex justify-center space-x-8">
+          <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-purple-600 transition-colors">
+            <span>GitHub</span>
+          </a>
+          <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-purple-600 transition-colors">
+            <span>LinkedIn</span>
+          </a>
+          <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-purple-600 transition-colors">
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white mt-12 py-6">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p>© 2024 Meu Portfólio. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const carouselImages = [
+      "/api/placeholder/1200/400",
+      "/api/placeholder/1200/400",
+      "/api/placeholder/1200/400"
+    ];
+    let currentSlide = 0;
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % carouselImages.length;
+      document.getElementById('carouselImage').src = carouselImages[currentSlide];
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + carouselImages.length) % carouselImages.length;
+      document.getElementById('carouselImage').src = carouselImages[currentSlide];
+    }
+  </script>
+
+</body>
+</html>
